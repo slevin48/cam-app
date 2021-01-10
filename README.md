@@ -9,10 +9,12 @@ https://github.com/lukexyz/iris/blob/main/webcam.py
 
 Inspiration:
 https://discuss.streamlit.io/t/possible-to-access-webcam-realtime-in-a-streamlit-app/947/5
-https://dev.to/carlosemv/
-dockerizing-a-flask-based-web-camera-application-469m
+https://dev.to/carlosemv/dockerizing-a-flask-based-web-camera-application-469m
 https://github.com/carlosemv/camera-app
 https://www.flaskpwa.com/#_hardwareCamera
 
 https://blog.prototypr.io/make-a-camera-web-app-tutorial-part-1-ec284af8dddf
 https://github.com/abenjamin765/camera-app/tree/master/part-2
+
+https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Taking_still_photos
+https://github.com/mdn/samples-server/blob/master/s/webrtc-capturestill/capture.js
