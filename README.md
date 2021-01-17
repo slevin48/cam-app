@@ -20,3 +20,8 @@ https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Taking_still_photos
 https://github.com/mdn/samples-server/blob/master/s/webrtc-capturestill/capture.js
 https://simpl.info/getusermedia/sources/
 https://github.com/samdutton/simpl/tree/gh-pages/getusermedia/sources
+
+Webcam-easy:
+https://nodei.co/npm/webcam-easy/
+https://bensonruan.com/how-to-access-webcam-and-take-photo-with-javascript/
+https://medium.com/swlh/how-to-access-webcam-and-take-picture-with-javascript-b9116a983d78
