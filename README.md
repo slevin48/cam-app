@@ -18,3 +18,5 @@ https://github.com/abenjamin765/camera-app/tree/master/part-2
 
 https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Taking_still_photos
 https://github.com/mdn/samples-server/blob/master/s/webrtc-capturestill/capture.js
+https://simpl.info/getusermedia/sources/
+https://github.com/samdutton/simpl/tree/gh-pages/getusermedia/sources
