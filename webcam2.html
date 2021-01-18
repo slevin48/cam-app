@@ -32,13 +32,19 @@
 
 <h2 align=center>Auto Video Stream to Still Image</h2>
 
-<video  id="myVideo" width="400" height="300" style="border: 1px solid #ddd;"></video>
-<canvas id="myCanvas" width="160" height="140" style="border: 1px solid #ddd;"></canvas><br>
+<div class="select">
+    <label for="videoSource">Video source: </label><select id="videoSource"></select>
+</div>
 
 <input type=button value="get Video" onclick="{getVideo()}">
 <input type=button value="get Pic" onclick="{takeSnapshot()}"><br>
 Take snapshot every <input type=number id="myInterval"  value="3000"> milliseconds
 <input type=button value="Auto" onclick="{takeAuto()}">
+
+<video  id="myVideo" width="400" height="300" style="border: 1px solid #ddd;"></video>
+<br>
+<canvas id="myCanvas" width="200" height="150" style="border: 1px solid #ddd;"></canvas><br>
+
 
 
 <script type="text/javascript">
