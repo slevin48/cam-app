@@ -28,8 +28,7 @@ def main():
     with col1:
         st.header("📺 Video Stream")
         st.text('Webcam capture')
-        st.text('Streamlit html component below')
-    html_component(path="webcam.html", width=600, height=600)
+    html_component(path="webcam3.html", width=600, height=600)
 
 
 if __name__ == '__main__':
