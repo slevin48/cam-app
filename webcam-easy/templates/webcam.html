@@ -2,7 +2,9 @@
 <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
 
 <button onclick="camFlip()">flip</button>
-<a id="download-photo">download</a>
+<button onclick="print()">print</button>
+<br>
+<!-- <a id="download-photo">download</a> -->
 
 <video id="webcam" autoplay playsinline width="640" height="480"></video>
 <canvas id="canvas" class="d-none"></canvas>
@@ -23,14 +25,31 @@
        console.log(err);
    });
 
-   let picture = webcam.snap();
-    document.querySelector('#download-photo').href = picture;
+   function print() {
+    let picture = webcam.snap();
+    // document.querySelector('#download-photo').href = picture;
+    canvasImage = document.getElementById('canvas');
+    imgData = getBase64Image(canvasImage);
+    localStorage.setItem("imgData", imgData);
+   }
+   
 
     function camFlip() {
         webcam.flip();
         webcam.start();  
     };
 
+    function getBase64Image(img) {
+        var canvas = document.createElement("canvas");
+        canvas.width = img.width;
+        canvas.height = img.height;
 
+        var ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0);
+
+        var dataURL = canvas.toDataURL("image/png");
+
+        return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+    }
 
 </script>
