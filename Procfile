@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run webcam.py
+web: gunicorn app:app

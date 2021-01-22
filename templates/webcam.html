@@ -1,0 +1,81 @@
+<!doctype html>
+<script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
+
+<button onclick="camFlip()">flip</button>
+<button onclick="submit()">save & print</button>
+<br>
+<span id="results"></span><a id="binary-photo"></a>
+<br>
+<video id="webcam" autoplay playsinline width="640" height="480"></video>
+<canvas id="canvas" class="d-none"></canvas>
+<!-- <audio id="snapSound" src="audio/snap.wav" preload = "auto"></audio> -->
+
+
+<script>
+    const webcamElement = document.getElementById('webcam');
+    const canvasElement = document.getElementById('canvas');
+    // const snapSoundElement = document.getElementById('snapSound');
+    const webcam = new Webcam(webcamElement, 'user', canvasElement);
+    const results = document.getElementById('results');
+
+
+    var url = "http://localhost:5000/download/"
+
+
+
+    webcam.start()
+   .then(result =>{
+      console.log("webcam started");
+   })
+   .catch(err => {
+       console.log(err);
+   });
+
+   function print() {
+    let picture = webcam.snap();
+    document.querySelector('#download-photo').href = picture;
+   }
+   
+
+    function camFlip() {
+        webcam.flip();
+        webcam.start();  
+    };
+
+    // GET method
+    // function submit() {
+    //     results.innerHTML="Picture sent to the server";
+    //     let picture = webcam.snap();
+    //     document.querySelector('#download-photo').href = picture;
+    //     var body = {
+    //         "picture":picture
+    //     }
+    // function reqListener () {
+    // console.log(this.responseText);
+    // }
+    // var oReq = new XMLHttpRequest();
+    // oReq.addEventListener("load", reqListener);
+    // oReq.open("GET", url+picture);
+    // oReq.send();
+    // }
+
+    function submit() {
+        results.innerHTML = "Picture sent to the server / ";
+        let picture = webcam.snap();
+        document.querySelector('#binary-photo').innerHTML = "Download"
+        document.querySelector('#binary-photo').href = picture;
+        var body = {
+            "picture":picture.replace(/^data:image\/(png|jpg);base64,/, "")
+        }
+        var xhr = new XMLHttpRequest();
+        function reqListener () {
+        console.log(this.responseText);
+        }
+        xhr.addEventListener("load", reqListener);
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xhr.send(JSON.stringify(body));
+
+    }
+
+</script>
