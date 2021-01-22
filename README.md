@@ -34,6 +34,7 @@ streamlit run webcam.py
 - https://simpl.info/imagecapture/
 - https://github.com/samdutton/simpl/tree/gh-pages/imagecapture
 - https://stackoverflow.com/questions/46882550/how-to-save-a-jpg-image-video-captured-with-webcam-in-the-local-hard-drive-with
+- http://danml.com/download.html
 
 ### Webcam-easy:
 - https://nodei.co/npm/webcam-easy/
