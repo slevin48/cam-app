@@ -1,7 +1,15 @@
 # Cam App
 
-Streamlit version https://glacial-temple-88396.herokuapp.com/
-Run Offline:
+Flask version https://cam48.herokuapp.com/
+
+Run Offling Flask version 2:
+```
+export FLASK_APP=app.py
+export FLASK_ENV=development
+flask run
+```
+
+Run Offline Streamlit version 1:
 ```
 cd streamlit-app
 streamlit run webcam.py
