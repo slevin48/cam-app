@@ -1,0 +1,10 @@
+{
+    "dev": {
+        "app_function": "app.app",
+        "aws_region": "eu-west-3",
+        "profile_name": "default",
+        "project_name": "cam-app",
+        "runtime": "python3.8",
+        "s3_bucket": "zappa-pn076q184"
+    }
+}
